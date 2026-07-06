@@ -32,7 +32,7 @@ Working through a 6-month structured AWS learning journey.
 - Automated Linux system monitoring script
 - Checks CPU, memory, disk, network and services
 - Scheduled via cron for daily automated reports
-- [View Script](projects/health_report.sh)
+- [View Script](health_report.sh)
 
 ### VPC Network Design
 - Designed a multi-subnet AWS VPC architecture
