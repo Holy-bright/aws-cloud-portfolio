@@ -34,17 +34,16 @@ Working through a 6-month structured AWS learning journey.
 - Scheduled via cron for daily automated reports
 - [View Script](health_report.sh)
 
+### VPC Network Design
+- Designed a multi-subnet AWS VPC architecture
+- Public and private subnet separation
+- Security group and NACL planning
 
 ### S3 Static Website Portfolio
 - Hosted personal portfolio page on AWS S3
 - Configured bucket policies for public access
 - Enabled versioning for file protection
 - [View Live Site](https://bright-cloud-portfolio-bright.s3.us-east-1.amazonaws.com/index.html)
-
-### VPC Network Design
-- Designed a multi-subnet AWS VPC architecture
-- Public and private subnet separation
-- Security group and NACL planning
 
 ## Learning Journey
 | Week | Topic | Status |
