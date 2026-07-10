@@ -45,6 +45,13 @@ Working through a 6-month structured AWS learning journey.
 - Enabled versioning for file protection
 - [View Live Site](https://bright-cloud-portfolio-bright.s3.us-east-1.amazonaws.com/index.html)
 
+### Custom VPC Architecture
+- Built a custom VPC from scratch in AWS
+- Configured public and private subnets
+- Attached Internet Gateway for public internet access
+- Configured route tables for proper traffic routing
+- Designed multi-tier network architecture
+
 ## Learning Journey
 | Week | Topic | Status |
 |------|-------|--------|
