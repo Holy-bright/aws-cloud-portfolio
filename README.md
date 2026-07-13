@@ -26,8 +26,13 @@ Working through a 6-month structured AWS learning journey.
 - AWS Global Infrastructure
 - Cloud Practitioner exam preparation
 
-## Projects
+### Security
+- IAM users, groups, roles and policies
+- Principle of least privilege implementation
+- MFA configuration for root account protection
+- Custom IAM policy creation
 
+## Projects
 ### System Health Report Script
 - Automated Linux system monitoring script
 - Checks CPU, memory, disk, network and services
