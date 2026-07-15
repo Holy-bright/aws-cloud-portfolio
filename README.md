@@ -62,7 +62,7 @@ Working through a 6-month structured AWS learning journey.
 - Web tier: EC2 with web-server-sg (ports 80, 443, 22)
 - Data tier: RDS with database-sg (port 3306 from web tier only)
 - Security: defence in depth using Security Groups and NACLs
-![Architecture Diagram](3-tier%20architecture.drawio.png)
+[Architecture Diagram](3-tier%20architecture.drawio.png)
 
 ## Learning Journey
 | Week | Topic | Status |
