@@ -1,0 +1,95 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >
+  Bright's first CloudFormation stack.
+  Creates an EC2 instance and S3 bucket.
+  Part of 6-month AWS Cloud Engineering journey.
+
+Parameters:
+  InstanceType:
+    Type: String
+    Default: t2.micro
+    Description: EC2 instance type
+    AllowedValues:
+      - t2.micro
+      - t2.small
+    ConstraintDescription: Must be t2.micro or t2.small
+
+  Environment:
+    Type: String
+    Default: learning
+    Description: Deployment environment tag
+
+Resources:
+
+  MySecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security group for CloudFormation EC2
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+          Description: HTTP access
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+          Description: SSH access (restrict to your IP in production)
+      Tags:
+        - Key: Name
+          Value: !Sub cfn-sg-${Environment}
+        - Key: ManagedBy
+          Value: CloudFormation
+
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-02b64aa047cb5edf5
+      InstanceType: !Ref InstanceType
+      SecurityGroups:
+        - !Ref MySecurityGroup
+      UserData:
+        Fn::Base64: |
+          #!/bin/bash
+          yum update -y
+          yum install -y httpd
+          systemctl start httpd
+          systemctl enable httpd
+          echo '<h1>Deployed by CloudFormation</h1>' > /var/www/html/index.html
+      Tags:
+        - Key: Name
+          Value: !Sub cfn-server-${Environment}
+        - Key: ManagedBy
+          Value: CloudFormation
+        - Key: Environment
+          Value: !Ref Environment
+
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub bright-cfn-bucket-${AWS::AccountId}
+      VersioningConfiguration:
+        Status: Enabled
+      Tags:
+        - Key: Name
+          Value: cfn-bucket
+        - Key: ManagedBy
+          Value: CloudFormation
+
+Outputs:
+  InstanceId:
+    Description: The EC2 Instance ID
+    Value: !Ref MyEC2Instance
+
+  InstancePublicIP:
+    Description: Public IP of the EC2 instance
+    Value: !GetAtt MyEC2Instance.PublicIp
+
+  BucketName:
+    Description: Name of the S3 bucket
+    Value: !Ref MyS3Bucket
+
+  WebsiteURL:
+    Description: URL to access the web server
+    Value: !Sub http://${MyEC2Instance.PublicIp}
