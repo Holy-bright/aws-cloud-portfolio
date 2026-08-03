@@ -4,7 +4,7 @@ A production-pattern serverless architecture using five
 AWS services working together automatically.
 
 ## Architecture
-![Pipeline Architecture](pipeline-architecture.png)
+![Pipeline Architecture](pipeline_architecture.png)
 
 ## Services Used
 
