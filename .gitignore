@@ -1,0 +1,18 @@
+# AWS credentials and keys
+*.pem
+*.key
+.aws/
+credentials
+*credentials*
+
+# Environment files with secrets
+.env
+*.env
+config.py
+secrets.py
+*secret*
+*password*
+
+# AWS specific
+aws_report_with_keys.py
+*access_key*
