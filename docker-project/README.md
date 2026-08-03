@@ -4,8 +4,8 @@
 A containerised web application using Docker and nginx:alpine.
 
 ## Files
-- `Dockerfile` — instructions to build the container image
-- `index.html` — the web page served by nginx inside the container
+- [Dockerfile](Dockerfile) — instructions to build the container image
+- [index.html](index.html) — the web page served by nginx inside the container
 
 ## How to Run
 ```bash
