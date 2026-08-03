@@ -10,7 +10,7 @@ Generates an inventory of AWS resources:
 - All EC2 instances with state and type
 - All IAM users
 
-Run: `python3 list_resources.py`
+[Run python3](list_resources.py)
 
 ### upload_to_s3.py
 Uploads files from local machine to S3:
@@ -18,7 +18,7 @@ Uploads files from local machine to S3:
 - Organises by date prefix (scripts/YYYY-MM-DD/)
 - Lists bucket contents after upload
 
-Run: `python3 upload_to_s3.py`
+[Run python3](upload_to_s3.py)
 
 ### stop_instances.py
 Safety-aware EC2 instance stopper:
@@ -27,7 +27,7 @@ Safety-aware EC2 instance stopper:
 - Requires typed confirmation before stopping
 - Stops all running instances on confirmation
 
-Run: `python3 stop_instances.py`
+[Run python3](stop_instances.py)
 
 ## Security
 - No credentials hardcoded in any script
