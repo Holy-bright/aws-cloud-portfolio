@@ -2,7 +2,7 @@
 
 Infrastructure as Code templates for AWS resource deployment.
 
-## my_stack.yaml
+##[my_stack.yaml](my_stack.yaml)
 
 Deploys a complete web application infrastructure:
 
