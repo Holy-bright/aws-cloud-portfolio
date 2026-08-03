@@ -4,7 +4,7 @@ A production-pattern serverless architecture using five
 AWS services working together automatically.
 
 ## Architecture
-![Pipeline Architecture](pipeline_architecture.png)
+[Pipeline Architecture](pipeline_architecture.png)
 
 ## Services Used
 
@@ -27,7 +27,7 @@ AWS services working together automatically.
 7. CloudWatch monitors for errors and duration issues
 
 ## Lambda Code
-See `lambda_function.py`
+[View Script](lambda_function.py)
 
 ## Key Design Decisions
 - Clients initialised outside handler for warm start performance
