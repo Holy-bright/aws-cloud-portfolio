@@ -27,7 +27,7 @@ AWS services working together automatically.
 7. CloudWatch monitors for errors and duration issues
 
 ## Lambda Code
-[View Script](lambda_function.py)
+[View Code](lambda_function.py)
 
 ## Key Design Decisions
 - Clients initialised outside handler for warm start performance
