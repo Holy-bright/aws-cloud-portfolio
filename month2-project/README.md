@@ -6,7 +6,7 @@ demonstrating core cloud engineering skills including networking,
 compute, storage, security, and monitoring.
 
 ## Architecture
-![Architecture Diagram](WebappArchitecture.png)
+[Architecture Diagram](WebappArchitecture.png)
 
 ## AWS Services Used
 
@@ -53,16 +53,16 @@ to my email when CPU exceeds 70% for one period.
 ## Screenshots
 
 ### EC2 Instance Running
-![EC2 Running](EC2Instance.png)
+[EC2 Running](EC2Instance.png)
 
 ### S3 Bucket with Image
-![S3 Bucket](S3Bucket.png)
+[S3 Bucket](S3Bucket.png)
 
 ### Live Website with S3 Image
-![Website](Webpage.png)
+[Website](Webpage.png)
 
 ### CloudWatch Alarm
-![CloudWatch](CloudWatch.png)
+[CloudWatch](CloudWatch.png)
 
 ## Skills Demonstrated
 - Custom VPC design and implementation
